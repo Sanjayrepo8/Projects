@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    /* A4 page size when printing */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .resume {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 40px 30px;
+      flex: 1 1 250px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 5px;
+    }
+
+    .sidebar p {
+      margin: 10px 0;
+    }
+
+    .content {
+      flex: 3 1 600px;
+      padding: 40px 30px;
+    }
+
+    .content h1 {
+      margin-top: 0;
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+ 
+    .content h3 {
+      margin-bottom: 5px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive stacking */
+    @media screen and (max-width: 768px) {
+      .resume {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="resume" class="resume">
+    <div class="sidebar">
+      <h2 contenteditable="true">Contact</h2>
+      <p contenteditable="true"><strong contenteditable="true">Email:</strong> john@example.com</p>
+      <p contenteditable="true"><strong contenteditable="true">Phone:</strong> (123) 456-7890</p>
+      <p contenteditable="true"><strong contenteditable="true">Address:</strong> City, Country</p>
+
+      <h2 contenteditable="true">Skills</h2>
+      <p contenteditable="true">HTML/CSS</p>
+      <p contenteditable="true">JavaScript</p>
+      <p contenteditable="true">React</p>
+      <p contenteditable="true">Responsive Design</p>
+
+      <h2 contenteditable="true">Social</h2>
+      <p contenteditable="true">LinkedIn: /john-doe</p>
+      <p contenteditable="true">GitHub: /johndoe</p>
+    </div>
+
+    <div class="content">
+      <h1 contenteditable="true">John Doe</h1>
+      <h3 contenteditable="true">Frontend Developer</h3>
+
+      <div class="section">
+        <h2 contenteditable="true">Profile</h2>
+        <p contenteditable="true">Creative frontend developer with 4+ years of experience building user-friendly interfaces and responsive websites.</p>
+      </div>
+
+      <div class="section">
+        <h2 contenteditable="true">Experience</h2>
+        <h3 contenteditable="true">Frontend Developer - XYZ Corp</h3>
+        <p contenteditable="true">2021 - Present</p>
+        <ul>
+          <li contenteditable="true">Built modern responsive apps with React and Tailwind CSS.</li>
+          <li contenteditable="true">Optimized website speed and SEO performance.</li>
+        </ul>
+
+        <h3 contenteditable="true">Web Developer - ABC Ltd</h3>
+        <p contenteditable="true">2019 - 2021</p>
+        <ul>
+          <li contenteditable="true">Developed landing pages and company website.</li>
+          <li contenteditable="true">Collaborated with designers for UI/UX improvements.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 contenteditable="true">Education</h2>
+        <p contenteditable="true">B.Sc. Computer Science - ABC University, 2018</p>
+      </div>
+
+      <div class="section">
+        <button class="download-btn" onclick="downloadResume()">Download PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadResume() {
+      const element = document.getElementById('resume');
+      const opt = {
+        margin: 0,
+        filename: 'Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BR+Guides&family=Smooch+Sans:wght@100..900&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-container {
+    height: 100%;
+    width: 700px;
+    border: 1px solid black;
+}
+#main-container ul li{
+    line-height: 20px;
+}
+.mini-container-1 {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.mini-container-2 {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+button{
+        padding: 10px;
+        
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff3f3;
+        border: 0px;
+        width: 170px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:600px){
+    #main-container p{
+        font-size: 13px;
+    }
+    #main-container ul li{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    #main-container {
+        height: 100%;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+    }
+}
