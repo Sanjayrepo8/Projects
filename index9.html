@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    @page { size: A4; margin: 0; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    .resume {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      color: #2c3e50;
+    }
+
+    .header p {
+      margin: 5px 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2c3e50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin: 30px auto 0;
+      padding: 12px 30px;
+      background: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .resume {
+        padding: 20px;
+        margin: 10px;
+      }
+
+      .header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="resume" class="resume">
+    <div class="header">
+      <h1>Jane Smith</h1>
+      <p>UX/UI Designer</p>
+      <p>Email: jane@example.com | Phone: (123) 456-7890</p>
+    </div>
+
+    <div class="card">
+      <h2>Profile</h2>
+      <p>Creative UX/UI designer with 5+ years of experience designing intuitive and beautiful interfaces for web and mobile applications.</p>
+    </div>
+
+    <div class="card">
+      <h2>Experience</h2>
+      <h3>Senior UX Designer - ABC Studio</h3>
+      <p>2021 - Present</p>
+      <ul>
+        <li>Led design for major client projects improving user retention by 30%.</li>
+        <li>Created wireframes, prototypes, and high-fidelity designs.</li>
+      </ul>
+
+      <h3>UX Designer - XYZ Agency</h3>
+      <p>2018 - 2021</p>
+      <ul>
+        <li>Worked on multiple responsive web and mobile apps.</li>
+        <li>Collaborated with developers and stakeholders for seamless UX.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <p>B.Des. in Visual Communication - ABC University, 2017</p>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <p>Figma, Adobe XD, Sketch, HTML, CSS, Design Systems</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact & Social</h2>
+      <p>LinkedIn: /jane-smith</p>
+      <p>Portfolio: www.janesmith.design</p>
+    </div>
+
+    <div style="text-align:center;">
+      <button class="download-btn" onclick="downloadResume()">Download PDF</button>
+    </div>
+  </div>
+
+  <script>
+    function downloadResume() {
+      const element = document.getElementById('resume');
+      const opt = {
+        margin:       0,
+        filename:     'Jane_Smith_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    }
+  </script>
+</body>
+</html>

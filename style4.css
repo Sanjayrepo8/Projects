@@ -1,0 +1,229 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#contaniner-1 {
+    margin-bottom: 300px;
+    width: 625px;
+    height: 842px;
+    position: relative;
+    left: 10%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 0%;
+}
+
+html {
+    background-color: #d4ebf83d;
+}
+
+.container {
+    width: 740px;
+    height: 942px;
+    position: relative;
+    left: 22%;
+}
+
+.container-2 {
+    width: 600px;
+    height: 900px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 580px;
+}
+
+.text-2 {
+    font-size: 14px;
+    margin-top: 7px;
+
+}
+
+#btn {
+    position: relative;
+    left: 46%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+.mcontainer {
+    padding: 10px;
+    margin: 7px 0px 0px 7px;
+}
+
+.mini-container-1 {
+    border: 1px solid black;
+    width: 500px;
+}
+
+.mini-container-1 h1 {
+    margin-bottom: 3px;
+}
+
+.mini-container-1 h2 {
+    margin-bottom: 4px;
+}
+
+.mini-container-2 h3 {
+    font-size: 19px;
+}
+
+.mini-container-4 h3 {
+    font-size: 19px;
+}
+
+.mini-container-2 ul li {
+    line-height: 21px;
+}
+
+.mini-container-4 ul li {
+    line-height: 21px;
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini-container-3 h3 {
+    font-size: 19px;
+}
+
+.mini-container-3 ul li {
+    line-height: 27px;
+}
+
+.mini-container-5 h3 {
+    font-size: 19px;
+}
+
+.mini-container-5 ul li {
+    line-height: 27px;
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    #contaniner-1 {
+        background-color: rgb(255, 255, 255);
+        width: 450px;
+        height: 800px;
+         
+        margin-bottom: 200px;
+        margin-left: 0px;
+    }
+  
+    .container {
+        width: 49px;
+        height: 670px;
+        position: relative;
+        left: 13px;
+        top: 0px;
+        
+
+    }
+
+    .container-2 {
+        width: 430px;
+        margin-left: 10px;
+        height: 700px;
+    }
+
+    .text-2 {
+        font-size: 11px;
+        margin-top: 7px;
+
+    }
+
+    #btn-1 {
+        position: relative;
+        left: 150px;
+        bottom: 30px;
+     padding: 10px;
+     width: 190px;
+     font-size: 15px;
+     color: black;
+     border: 1px solid black;
+     background-color: white;
+    }
+
+    #btn {
+        display: none;
+    }
+
+    .mini-container-1 {
+        border: 1px solid black;
+        width: 360px;
+    }
+
+    .mini-container-1 h1 {
+        margin-bottom: 3px;
+        font-size: 24px;
+    }
+
+    .mini-container-1 h2 {
+        margin-bottom: 4px;
+        font-size: 21px;
+    }
+
+    .mini-container-1 p {
+        font-size: 13px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        width: 400px;
+    }
+
+    .mini-container-2 h3 {
+        font-size: 15px;
+    }
+
+    .mini-container-4 h3 {
+        font-size: 15px;
+    }
+
+    .mini-container-2 ul li {
+        line-height: 16px;
+    }
+
+    .mini-container-4 ul li {
+        line-height: 16px;
+    }
+
+    .two {
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+    }
+
+    .mini-container-3 h3 {
+        font-size: 15px;
+    }
+
+    .mini-container-3 ul li {
+        line-height: 17px;
+        font-size: 11px;
+    }
+
+    .mini-container-5 h3 {
+        font-size: 15px;
+    }
+
+    .mini-container-5 ul li {
+        line-height: 17px;
+        font-size: 11px;
+    }
+}
